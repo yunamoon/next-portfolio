@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header > div > a,
+footer > div > a,
+nav > a {
+  @apply text-gray-900 dark:text-gray-300;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+nav > a:hover {
+  @apply hover:text-gray-900 hover:text-gray-400;
+}
+
+p {
+  @apply text-gray-600 dark:text-gray-400;
+}
