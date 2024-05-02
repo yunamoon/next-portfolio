@@ -31,12 +31,12 @@ export default function Header() {
             <Link href="/project" className="mr-5 hover:text-gray-900 ">
               Project
             </Link>
-            <Link href="/blog" className="mr-5 hover:text-gray-900 ">
+            {/* <Link href="/blog" className="mr-5 hover:text-gray-900 ">
               Blog
             </Link>
             <Link href="/contact" className="mr-5 hover:text-gray-900 ">
               Contact
-            </Link>
+            </Link> */}
           </nav>
           <DarkMode />
         </div>

@@ -41,5 +41,6 @@ p {
 .card {
   @apply transition duration-300 transform cursor-pointer
           hover:scale-105 
+
           hover:text-blue-600 hover:font-normal;
 }

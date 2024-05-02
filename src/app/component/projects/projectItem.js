@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function ProjectItem({ projects }) {
-  const imgSrc = projects.cover.external.url || projects.cover.file.url;
+  const imgSrc = projects.cover.file?.url || projects.cover.external.url;
   const title = projects.properties.Name.title[0].plain_text;
   const start = projects.properties.WorkPeriod.date.start;
   const end = projects.properties.WorkPeriod.date.end;
@@ -12,25 +12,28 @@ export default function ProjectItem({ projects }) {
 
   return (
     <>
-      <div className="xl:w-1/4 md:w-1/2 p-4 card">
-        <div className="bg-gray-100 p-6 rounded-lg">
+      <div className="xl:w-1/4 md:w-1/2 p-4 card ">
+        <div className="bg-gray-100 p-6 rounded-lg dark:bg-neutral-900">
           <Image
             className="h-40 rounded w-full object-cover object-center mb-6"
             alt="cover image"
             src={imgSrc}
-            quality={0}
-            width={0}
-            height={30}
+            quality={100}
+            width={400}
+            height={300}
+            layout="responsive"
             objectFit="cover"
           />
           {/* <img className="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content"> */}
           <h3 className="tracking-widest text-yellow-500 text-xs font-medium title-font">
             {classify}
           </h3>
-          <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
+          <h2 className="text-lg text-gray-900 font-medium title-font mb-4 ">
             {title}
           </h2>
-          <p className="leading-relaxed text-base">{description}</p>
+          <p className="leading-relaxed text-base mb-5 overflow-y-auto min-h-40 max-h-40">
+            {description}
+          </p>
 
           <a href={github}>깃허브 바로가기</a>
 
