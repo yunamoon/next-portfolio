@@ -14,16 +14,32 @@ nav > a {
   @apply text-gray-900 dark:text-gray-300;
 }
 
-h1:hover,
+/* h1:hover,
 h2:hover,
 h3:hover,
 h4:hover,
 h5:hover,
-h6:hover,
+h6:hover, */
 nav > a:hover {
   @apply hover:text-gray-900 hover:text-gray-400;
 }
 
 p {
   @apply text-gray-600 dark:text-gray-400;
+}
+
+.project-card {
+  @apply flex flex-col m-3  rounded-xl w-full
+          transition duration-300 transform border border-gray-300
+          hover:scale-105 hover:shadow-lg
+          dark:border-gray-200/50
+          dark:hover:shadow-gray-400/40
+          dark:bg-slate-700
+          hover:text-blue-600;
+}
+
+.card {
+  @apply transition duration-300 transform cursor-pointer
+          hover:scale-105 
+          hover:text-blue-600 hover:font-normal;
 }
