@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function ProjectItem({ projects }) {
-  const imgSrc = projects.cover.file?.url || projects.cover.external.url;
+  const imgSrc = projects.cover.file.url || projects.cover.external.url;
   const title = projects.properties.Name.title[0].plain_text;
   const start = projects.properties.WorkPeriod.date.start;
   const end = projects.properties.WorkPeriod.date.end;
@@ -22,7 +22,6 @@ export default function ProjectItem({ projects }) {
             width={400}
             height={300}
             layout="responsive"
-            objectFit="cover"
           />
           {/* <img className="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content"> */}
           <h3 className="tracking-widest text-yellow-500 text-xs font-medium title-font">
